@@ -1,7 +1,8 @@
 ## About project
 A tower defense game created in my first year. 
-* Programming Language: Java
+* Programming Language: Java 
 * Build Tool: Gradle
+* Execution requirements: Java 8, Gradle 8
 
 ## To run in terminal:
   ```gradle run```
