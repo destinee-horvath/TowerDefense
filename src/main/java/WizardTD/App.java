@@ -25,40 +25,6 @@ import WizardTD.Tower.*;
 import WizardTD.Gremlins.*;
 import WizardTD.UI.*;
 
-
-// import main.java.WizardTD.MouseLocation;
-// import main.java.WizardTD.ReadJson;
-// import main.java.WizardTD.ButtonsFolder.AdditionalCosts;
-// import main.java.WizardTD.ButtonsFolder.ButtonBuild;
-// import main.java.WizardTD.ButtonsFolder.ButtonBuildFreeze;
-// import main.java.WizardTD.ButtonsFolder.ButtonManaPool;
-// import main.java.WizardTD.ButtonsFolder.ButtonPause;
-// import main.java.WizardTD.ButtonsFolder.ButtonSpeed;
-// import main.java.WizardTD.ButtonsFolder.ButtonUpgradeDamage;
-// import main.java.WizardTD.ButtonsFolder.ButtonUpgradeRange;
-// import main.java.WizardTD.ButtonsFolder.ButtonUpgradeSpeed;
-// import main.java.WizardTD.ButtonsFolder.Buttons;
-// import main.java.WizardTD.Gremlins.Gremlin;
-// import main.java.WizardTD.Gremlins.GremlinPrint;
-// import main.java.WizardTD.Gremlins.InitialiseGremlins;
-// import main.java.WizardTD.Gremlins.NodeNew;
-// import main.java.WizardTD.Gremlins.PathFinder;
-// import main.java.WizardTD.Tower.DisplayTowerInfo;
-// import main.java.WizardTD.Tower.PlaceTower;
-// import main.java.WizardTD.Tower.ShooterLogic;
-// import main.java.WizardTD.Tower.ShooterPrint;
-// import main.java.WizardTD.Tower.Shooter;
-// import main.java.WizardTD.Tower.Tower;
-// import main.java.WizardTD.Tower.TowerPrint;
-// import main.java.WizardTD.Tower.TowerPrintDamage;
-// import main.java.WizardTD.Tower.TowerPrintRange;
-// import main.java.WizardTD.Tower.TowerPrintSpeed;
-// import main.java.WizardTD.Tower.UpgradeTower;
-// import main.java.WizardTD.UI.Lose;
-// import main.java.WizardTD.UI.ManaBar;
-// import main.java.WizardTD.UI.PrintManaBar;
-// import main.java.WizardTD.UI.Win;
-
 public class App extends PApplet {
 
     public static final int CELLSIZE = 32;
@@ -74,8 +40,7 @@ public class App extends PApplet {
     public String configPath;
 
     public Random random = new Random();
-	
-	// Feel free to add any additional methods or attributes you want. Please put classes in different files.
+
     public Board board;
     public JSONObject jsonFile;
     public ReadJson readJson;
@@ -353,12 +318,6 @@ public class App extends PApplet {
         currentTowerClicked = false;
         fileMap = board.fileMap(level);
 
-        // mana += manaBar.increaseManaTimer();
-        // mana = manaBar.getMana();
-        // manaCap = manaBar.getManaCap();
-
-        //System.out.println(mana);
-
         /*
          * Mouse info
          */
@@ -368,7 +327,6 @@ public class App extends PApplet {
         mouseX = mouseLocation.tileX();
         mouseY = mouseLocation.tileY();
 
-        //System.out.println("|| mouseX: " + mouseX + "  ||  " + "mouseY: " + mouseY + " ||");
         lastClickInfo = new ClickInfo(mouseX, mouseY);
         
 
@@ -501,12 +459,6 @@ public class App extends PApplet {
 
     }
 
-    
-    /*@Override
-    public void mouseDragged(MouseEvent e) {
-
-    }*/
-
     /*
      * Draw all elements in the game by current frame.
      */
@@ -518,7 +470,6 @@ public class App extends PApplet {
             //speeds
             speedTower = readJson.initialFiringSpeed();
             speedGremlin = readJson.monsterSpeed();
-            //System.out.println(speedGremlin);
 
             /*
              * Mana
